@@ -46,7 +46,7 @@ El reloj se actualiza en tiempo real con `Date()`, y el sonido del segundero es 
 - González-Torres, F. _"Untitled (Perfect Lovers)"_, 1991.
 - Bishop, C. “Delegated Performance”, 2010.
 - Vidiella, G. “Prácticas encarnadas y espacio digital”, 2019.
--...
+- ...
 
 
 ## 🏷️ Topics
