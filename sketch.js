@@ -1,5 +1,5 @@
 let lastSecond = -1;
-let env, osc;
+let env1, osc1, env2, osc2, reverb;
 let audioActive = false;
 
 function setup() {
@@ -7,19 +7,32 @@ function setup() {
   angleMode(DEGREES);
   noCursor();
 
-  env = new p5.Envelope();
-  env.setADSR(0.001, 0.05, 0, 0.1);
-  env.setRange(0.2, 0);
+  env1 = new p5.Envelope();
+  env1.setADSR(0.01, 0.05, 0, 0.1);
+  env1.setRange(0.4, 0);
 
-  osc = new p5.Oscillator('sine');
-  osc.freq(600);
-  osc.amp(env);
-  osc.start();
-  osc.amp(0);
+  osc1 = new p5.Oscillator('square');
+  osc1.freq(1800);
+  osc1.amp(env1);
+  osc1.start();
+  osc1.amp(0);
+
+  env2 = new p5.Envelope();
+  env2.setADSR(0.05, 0.4, 0, 1.0);
+  env2.setRange(0.7, 0);
+
+  osc2 = new p5.Oscillator('triangle');
+  osc2.freq(80);
+  osc2.amp(env2);
+  osc2.start();
+  osc2.amp(0);
+
+  reverb = new p5.Reverb();
+  reverb.process(osc2, 6, 4);
 }
 
 function mousePressed() {
-  userStartAudio();  // Activar el contexto de audio
+  userStartAudio();
   audioActive = !audioActive;
 }
 
@@ -33,11 +46,20 @@ function draw() {
   drawClock(-offset, 0, r);
   drawClock(offset, 0, r);
 
+  // Paneo dinámico entre -1 y 1
+  let pan = sin(frameCount * 0.01);
+  osc1.pan(pan);      // "tic" oscila suavemente
+  osc2.pan(-pan);     // "toc" en contrafase
+
   let sc = second();
   if (sc !== lastSecond) {
     lastSecond = sc;
     if (audioActive) {
-      env.play();
+      if (sc % 2 === 0) {
+        env1.play();
+      } else {
+        env2.play();
+      }
     }
   }
 }
