@@ -2,7 +2,7 @@
 
 **online — barring a blackout**
 
-> Una reinterpretación digital y generativa de la obra _"Untitled (Perfect Lovers)"_ de Félix González-Torres.
+> Una reinterpretación generativa de la obra _"Untitled (Perfect Lovers)"_ de Félix González-Torres.
 
 ---
 
