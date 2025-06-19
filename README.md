@@ -8,7 +8,7 @@
 
 ## 🌀 Concepto
 
-Untitled (Perfect Lovers Sync Eternally) – online — barring a blackout, es una performance digital que traslada la poética de sincronía amorosa a un entorno generativo y algorítmico. A través de una web interactiva se presentan dos relojes en sincronía perfecta, flotando sobre un fondo negro, en clara alusión a la pieza original de González-Torres.
+**Untitled (Perfect Lovers Sync Eternally) – online — barring a blackout**, es una performance digital que traslada la poética de sincronía amorosa a un entorno generativo y algorítmico. A través de una web interactiva se presentan dos relojes en sincronía perfecta, flotando sobre un fondo negro, en clara alusión a la pieza original de González-Torres.
 
 La obra vive en código abierto: su forma, sonido y lógica se sostienen únicamente mientras los servidores lo permitan. Esta condición sitúa al proyecto dentro de la fragilidad tecnológica contemporánea, donde la eternidad es un gesto condicional: **siempre online, salvo apagón**.
 
